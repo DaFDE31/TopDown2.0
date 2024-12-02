@@ -2,6 +2,8 @@ extends Node2D
 
 class_name CombatSystem
 
+signal cast_activeSpell
+
 @onready var animated_sprite_2d: AnimationController = $"../AnimatedSprite2D"
 
 @onready var right_hand_weapon: Sprite2D = $RightHandWeapon
@@ -63,3 +65,6 @@ func perform_attack_action(weapon: WeaponItem, sprite: Sprite2D):
 	sprite.rotation_degrees = attack_data.get("rotation")
 	sprite.z_index = attack_data.get("z_index")
 	sprite.show()
+	
+	if weapon.attack_type == "Magic":
+		cast_activeSpell.emit()

@@ -11,13 +11,18 @@ class_name OnScreenUI
 
 @onready var slots_dictionary = {
 	"Right_Hand": right_hand_slot,
-	"Left_Hand": right_hand_slot,
+	"Left_Hand": left_hand_slot,
 	"Potions":potion_slot,
 	
 }
 
 func equip_item(item: InventoryItem, slot_to_equip: String):
 	slots_dictionary[slot_to_equip].set_equipment_texture(item.texture)
+	
+	
+func spell_cooldown_activated(cooldown:float):
+	spell_slot.on_cooldown(cooldown)
+	
 	
 
 const HEART_ROW_SIZE = 8
@@ -60,3 +65,8 @@ func _process(delta: float) -> void:
 			h.frame = quarter_life  # Partial heart
 		else:
 			h.frame = 0  # Empty heart
+			
+func toggle_spellSlot(is_visible:bool, ui_texture : Texture):
+	spell_slot.visible = is_visible
+	if is_visible:
+		spell_slot.set_equipment_texture(ui_texture)

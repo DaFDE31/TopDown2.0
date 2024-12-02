@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=5 format=3 uid="uid://dou7b053qe8iv"]
+
+[ext_resource type="Shape2D" uid="uid://bg623c08hni4w" path="res://Resources/Weapons/SpellBook/spell_book_groundcollision_item.tres" id="1_dywmb"]
+[ext_resource type="Script" path="res://Scripts/inventory_item.gd" id="2_0nxgn"]
+[ext_resource type="Texture2D" uid="uid://cfoua4euqwvf8" path="res://assets/Items/Weapons/Book/Sprite.png" id="3_mktd6"]
+[ext_resource type="Resource" uid="uid://davhui8ojejhh" path="res://Resources/Weapons/SpellBook/spellbook_weapon_item.tres" id="4_hgblf"]
+
+[resource]
+script = ExtResource("2_0nxgn")
+slot_type = "Left_Hand"
+name = "Spell Book"
+ground_collision_shape = ExtResource("1_dywmb")
+texture = ExtResource("3_mktd6")
+max_stacks = 1
+price = 120
+weapon_item = ExtResource("4_hgblf")

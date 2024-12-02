@@ -1,2 +1,3 @@
+SpellConfig
 Resource
 VisualShaderNodeScreenNormalWorldSpace

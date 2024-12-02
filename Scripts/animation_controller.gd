@@ -29,6 +29,10 @@ const DIRECTION_TO_ATTACK_ANIMATION = {
 var attack_direction = null
 var item_eject_direction = Vector2.DOWN
 
+var attack_vector:
+	get:
+		return DIRECTION_TO_ATTACK_VECTOR[attack_direction]
+
 func play_movement_animation(velocity: Vector2):
 	if velocity.y != 0:
 		if velocity.y > 0:

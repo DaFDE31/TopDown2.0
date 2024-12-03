@@ -1,15 +1,9 @@
-res://Scenes/main_character.tscn
+res://Scenes/level.tscn
 res://Resources/tileset.tres
 res://Resources/Weapons/SpellBook/spellbook_weapon_item.tres
 res://Resources/Weapons/Wand/wand_weapon_item.tres
 res://Resources/Weapons/Sword/sword_weapon_item.tres
-res://Resources/Spells/fireball/fireSpell_config.tres
-res://Resources/Spells/ices/iceSpell_config.tres
-res://Resources/Spells/plantSpike/plantSpell_config.tres
-res://Scripts/inventory.gd
-res://Scripts/on_screen_ui.gd
-res://Scripts/spell_system.gd
-res://Scenes/level.tscn
+res://Scenes/main_character.tscn
 res://Scenes/pick_up_item.tscn
 res://Scenes/UI/on_screen_equipment_slot.tscn
 res://Scenes/UI/on_screen_ui.tscn
@@ -19,7 +13,3 @@ res://Scenes/health_system.tscn
 res://Scenes/root.tscn
 res://Scenes/spell.tscn
 res://Scenes/inventory_ui.tscn
-res://Scripts/combat_system.gd
-res://Scripts/animation_controller.gd
-res://Scripts/spell.gd
-res://Scripts/on_screen_equipment_slot.gd

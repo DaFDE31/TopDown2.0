@@ -124,7 +124,7 @@ func check_magicUI_visibility():
 	(combat_system.right_weapon != null and \
 	 combat_system.right_weapon.attack_type == "Magic")
 	if should_showUI == false:
-		on_screen_ui.toggle_spell_slot(false,null)
+		on_screen_ui.toggle_spellSlot(false,null)
 	
 	inventory_ui.toggele_spells_ui(should_showUI)
 	if should_showUI == false:

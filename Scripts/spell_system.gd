@@ -16,7 +16,7 @@ var spellConfigs: Array[SpellConfig] = [
 const SPELL_SCENE = preload("res://Scenes/spell.tscn")
 
 var current_spell_cooldown = null
-var cooldown_timer = 1000
+var cooldown_timer = 0
 var active_spellIndex = -1
 
 func _ready() -> void:
@@ -32,7 +32,7 @@ func on_cast_activeSpell():
 	var spell_config = spellConfigs[active_spellIndex]
 	
 	
-	if cooldown_timer != 0 and cooldown_timer< current_spell_cooldown:
+	if (cooldown_timer != 0 and cooldown_timer < current_spell_cooldown):
 		return 
 	else:
 		cooldown_timer = 0
@@ -55,7 +55,7 @@ func on_spell_activated(idx: int):
 	current_spell_cooldown = spell_confrig.initial_cooldown
 	
 	
-func get_spell_rotation(spell_direction: Vector2,initial_rotation:int):
+func get_spell_rotation(spell_direction: Vector2,initial_rotation: int):
 	match spell_direction:
 		Vector2.LEFT:
 			return -180 +initial_rotation

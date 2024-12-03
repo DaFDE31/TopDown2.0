@@ -7,7 +7,7 @@
 
 [resource]
 script = ExtResource("2_8w148")
-slot_type = "Left_Hand"
+slot_type = "Right_Hand"
 name = "Wand"
 ground_collision_shape = ExtResource("1_tmskv")
 texture = ExtResource("3_duejr")
